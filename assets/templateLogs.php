@@ -15,11 +15,9 @@
     <img src="./assets\media\logo.png" alt="Logo">
     <h1>The pastry <span>differently</span></h1>
   </div>
-</header>
-<main>
   <?=
-    $contentLogs;
+    $content;
 ?>
-</main>
+</header>
 </body>
 </html>

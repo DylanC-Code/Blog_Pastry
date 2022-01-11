@@ -6,7 +6,7 @@
   text-decoration: none;
   list-style-type: none;
 }
-body {
+header {
   height: 100vh;
   padding: 1rem 3rem 3rem;
   background: radial-gradient(
@@ -16,21 +16,47 @@ body {
     ),
     radial-gradient(100% 197.75% at 100% 0%, #000000 0%, #434343 100%);
 }
-
 .logoContainer {
   display: flex;
   align-items: center;
   justify-content: end;
-  color: #ffffff;
 }
 .logoContainer h1 {
   font: 4.87rem "Dancing Script";
+  color: #ffffff;
 }
 .logoContainer span {
   font: 3.125rem Roboto;
 }
+h2 {
+  position: relative;
+  letter-spacing: 5px;
+  font: 9.37rem "Dancing Script";
+  color: #ffffff;
+  text-shadow: 0px 4px 15px #ca1111;
+  margin-left: 10%;
+  margin-top: 30vh;
+}
+h2::after {
+  content: url("./media/liseret2.svg");
+  position: absolute;
+  bottom: -50px;
+  left: 15%;
+  transform: scaleX(2.5);
+}
+h2::before {
+  content: url("./media/liseret2.svg");
+  position: absolute;
+  bottom: -150px;
+  left: 15%;
+  transform: scaleX(2.5) rotate(180deg);
+}
 
-fieldset {
+/*********************/
+/* FORM LOG/REGISTER */
+/*********************/
+
+form[action*="checker"] fieldset {
   margin: 5vh auto;
   padding: 2rem 0;
   width: 40vw;
@@ -38,8 +64,11 @@ fieldset {
   border-radius: 15px;
   background-color: #ffffff15;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-evenly;
 }
-legend {
+form[action*="checker"] legend {
   width: 200px;
   height: 80px;
   padding: 11px 38px;
@@ -48,20 +77,21 @@ legend {
   border-radius: 120px/50px;
   border: 2px groove #ffffff;
   font: 2.75rem "Dancing Script";
+  color: black;
 }
-fieldset div {
+form[action*="checker"] fieldset div {
   width: 80%;
   margin: 0 auto 0.5rem;
   display: flex;
   align-items: center;
 }
-fieldset label {
+form[action*="checker"] fieldset label {
   color: #ffffff;
-  font: 200 2.31rem Roboto;
-  width: 235px;
+  font: 200 1.7rem Roboto;
+  width: 250px;
   display: inline-block;
 }
-fieldset input {
+form[action*="checker"] fieldset input {
   width: 50%;
   height: 1.8rem;
   padding-left: 0.5rem;
@@ -69,7 +99,7 @@ fieldset input {
   background-color: #c4c4c4;
   cursor: pointer;
 }
-fieldset input[type="submit"] {
+form[action*="checker"] fieldset input[type="submit"] {
   height: 40px;
   width: 200px;
   border-radius: 10px;
@@ -82,4 +112,145 @@ fieldset input[type="submit"] {
   transform: translateX(-50%);
   font: 1.25rem Roboto;
   letter-spacing: 2px;
+}
+
+/***********************/
+/******** MAIN ********/
+/***********************/
+main {
+  display: flex;
+  color: #ffffff;
+}
+main > div:nth-child(1) {
+  width: 70%;
+  padding: 5rem;
+  background: radial-gradient(
+    100% 197.75% at 100% 0%,
+    rgba(58, 123, 213, 0.64) 0%,
+    rgba(58, 96, 115, 0.8) 53.13%
+  );
+}
+main > div:nth-child(2) {
+  width: 30%;
+}
+main > div:nth-child(1) h1 {
+  font-size: 3.875rem;
+  letter-spacing: 5px;
+  position: relative;
+}
+main > div:nth-child(1) h1::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 8px;
+  background-color: #ffffff;
+  bottom: -40%;
+  left: 0;
+}
+/*********************/
+/** FORM NEW RECIPE **/
+/*********************/
+form[action*="recipeValidator"] {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+form[action*="recipeValidator"] input[type="text"],
+form[action*="recipeValidator"] fieldset h3,
+form[action*="recipeValidator"] label {
+  width: 60%;
+  height: 5vh;
+  border: none;
+  margin-top: 1rem;
+  font: 300 2.15rem Roboto;
+  border-bottom: 4px solid #ffffff;
+  background-color: transparent;
+  cursor: pointer;
+}
+label[for="image"] {
+  display: block;
+  border-bottom: 4px solid #ffffff !important;
+}
+form[action*="recipeValidator"] fieldset h3 {
+  border: none;
+}
+form[action*="recipeValidator"] label {
+  margin-right: 2rem;
+  border: none;
+}
+form[action*="recipeValidator"] input::placeholder {
+  color: #ffffff;
+}
+form[action*="recipeValidator"] fieldset {
+  margin-top: 3rem;
+  border: none;
+}
+form[action*="recipeValidator"] fieldset:nth-child(2) {
+  width: 50%;
+}
+form[action*="recipeValidator"] input[type="radio"] {
+  width: 30px;
+  height: 30px;
+  margin: 2rem 1rem 6rem 0;
+}
+form[action*="recipeValidator"] input[type="submit"] {
+  width: 100%;
+  cursor: pointer;
+  color: #000000;
+  background-color: #ffffff;
+  font-weight: 500;
+  letter-spacing: 3px;
+  height: 5vh;
+  font-size: 1.3rem;
+}
+form[action*="recipeValidator"] input[type="file"] {
+  display: none;
+}
+/*********************/
+/*** RESUME RECIPE ***/
+/*********************/
+.card {
+  padding: 3rem;
+  background: #f1f1f1;
+  color: black;
+  display: grid;
+  font: 1.3rem roboto;
+  grid-template: 30% repeat(7, auto) / repeat(4, auto);
+}
+#imgRecipe {
+  grid-area: 1 / 1 / 3/5;
+  width: 100%;
+  max-height: 40vh;
+}
+.card h1 {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: 3/1/3/4;
+}
+#icon {
+  display: flex;
+  align-items: center;
+}
+.card hr {
+  grid-area: 4/1/4/5;
+  height: 1px;
+}
+.card img[alt="difficulty"] {
+  width: 40px;
+}
+.card p {
+  text-align: center;
+}
+#description {
+  grid-area: 5/1/6/5;
+  text-align: justify;
+  line-height: 1.8rem;
+}
+.ingredientRes:nth-child(even) {
+  grid-column: 1/3;
+}
+.ingredientRes:nth-child(odd) {
+  grid-column: 3/5;
 }

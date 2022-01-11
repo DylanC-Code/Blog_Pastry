@@ -117,16 +117,16 @@ section:nth-child(2) article {
   border: 1px solid #ffffff;
   background-color: rgba(196, 196, 196, 0.3);
 }
-.logoCategory:nth-child(1) {
+.categoriesContainer article:nth-child(1) .logoCategory {
   background: 50% 40% no-repeat url("./media/logo_tarte.png"),
     rgba(196, 196, 196, 0.3);
 }
-.logoCategory:nth-child(2) {
-  background: center no-repeat url("./media/logo_macaron.png"),
+.categoriesContainer article:nth-child(2) .logoCategory {
+  background: 50% 40% no-repeat url("./media/logo_macaron.png"),
     rgba(196, 196, 196, 0.3);
 }
-.logoCategory:nth-child(3) {
-  background: center no-repeat url("./media/logo_gateau.png"),
+.categoriesContainer article:nth-child(3) .logoCategory {
+  background: 50% 40% no-repeat url("./media/logo_gateau.png"),
     rgba(196, 196, 196, 0.3);
 }
 section:nth-child(2) article h1 {

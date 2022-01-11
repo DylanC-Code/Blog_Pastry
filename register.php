@@ -26,6 +26,6 @@ ob_start();
 </form>
 
 <?php
-$contentLogs = ob_get_clean();
+$content = ob_get_clean();
 
 require_once 'C:\wamp64\www\Blog_Pastry\assets\templateLogs.php';
