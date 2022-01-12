@@ -28,4 +28,4 @@ ob_start();
 <?php
 $content = ob_get_clean();
 
-require_once 'C:\wamp64\www\Blog_Pastry\assets\templateLogs.php';
+require_once 'C:\wamp64\www\Blog_Pastry\assets\templateHeaderRedGradient.php';

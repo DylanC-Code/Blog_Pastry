@@ -24,22 +24,21 @@
     <section>
       <div class="categoriesContainer">
         <article>
-          <div class="logoCategory"></div>
+          <div class="logoCategory"><a href="./categoryPage.php?category=Pies"></a></div>
           <h1>Pies</h1>
           <p>Cras at dignissim erat. Sed vel massa vitae massa dignissim accumsan. Etiam aliquet placerat lacus, sed tempus lacus ornare at.</p>
         </article>
         <article>
-          <div class="logoCategory"></div>
+          <div class="logoCategory"><a href="./categoryPage.php?category=Macaroons"></a></div>
           <h1>Macaroons</h1>
           <p>Cras at dignissim erat. Sed vel massa vitae massa dignissim accumsan. Etiam aliquet placerat lacus, sed tempus lacus ornare at.</p>
         </article>
       <article>
-        <div class="logoCategory"></div>
+        <div class="logoCategory"><a href="./categoryPage.php?category=Cakes"></a></div>
         <h1>Cakes</h1>
         <p>Cras at dignissim erat. Sed vel massa vitae massa dignissim accumsan. Etiam aliquet placerat lacus, sed tempus lacus ornare at.</p>
       </article>
     </div>
-      <a href="#" class="ancre-btn">Categories</a>
     </section>
 
     <section>
@@ -64,16 +63,16 @@
   </main>
   <footer>
     <div>
-      <a href=""><img src="assets\media\twitter.png" alt="logo twitter"></a>
-      <a href=""><img src="assets\media\fb.png" alt="logo fb"></a>
-      <a href=""><img src="assets\media\instagram.png" alt="logo instagram"></a>
-      <a href=""><img src="assets\media\github.png" alt="logo github"></a>
+      <a href="#"><img src="assets\media\twitter.png" alt="logo twitter"></a>
+      <a href="#"><img src="assets\media\fb.png" alt="logo fb"></a>
+      <a href="#"><img src="assets\media\instagram.png" alt="logo instagram"></a>
+      <a href="#"><img src="assets\media\github.png" alt="logo github"></a>
     </div>
     <ul>
-      <li><a href="">Register</a></li>
-      <li><a href="">Log In</a></li>
-      <li><a href="">Contact Us</a></li>
-      <li><a href="">CGU</a></li>
+      <li><a href="./register.php">Register</a></li>
+      <li><a href="./logIn.php">Log In</a></li>
+      <li><a href="#">Contact Us</a></li>
+      <li><a href="#">CGU</a></li>
     </ul>
     <div>
       <p>© Pastry Freak. All rights reserved.</p>

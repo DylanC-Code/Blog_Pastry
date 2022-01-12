@@ -1,7 +1,7 @@
 const recipe = document.querySelector("input[name=recipe]");
 const description = document.querySelector("input[name=description]");
 const image = document.querySelector("input[name=image]");
-const difficultys = document.querySelectorAll("input[type=radio]");
+const difficultys = document.querySelectorAll("input[name=difficulty]");
 const ingredients = [...document.getElementsByClassName("ingredient")];
 const ingredientsRes = [...document.getElementsByClassName("ingredientRes")];
 const imgDifficulty = document.querySelector('img[alt="difficulty"]');
@@ -9,7 +9,7 @@ const imgDifficulty = document.querySelector('img[alt="difficulty"]');
 e = [];
 
 recipe.addEventListener("input", () => {
-  document.querySelector(".card h1").textContent = recipe.value;
+  document.querySelector(".dynamicCard h1").textContent = recipe.value;
 });
 description.addEventListener("input", () => {
   document.querySelector("#description").textContent = description.value;

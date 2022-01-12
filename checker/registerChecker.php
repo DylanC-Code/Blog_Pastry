@@ -5,11 +5,11 @@ $username = strtolower($_POST['username']);
 $password = $_POST['password'];
 $passwordVerif = $_POST['passwordVerif'];
 
-$req = $db->query("SELECT `email`, `username` FROM `users` WHERE `email`='$email' OR `username`= '$username'");
+$req = $db->query("SELECT `email`, `user_name` FROM `users` WHERE `email`='$email' OR `user_name`= '$username'");
 $edit = $req->fetch(PDO::FETCH_ASSOC);
 
 $emailDb = $edit['email'];
-$usernameDb = $edit['username'];
+$usernameDb = $edit['user_name'];
 
 function emailChecker($email, $emailDb)
 {

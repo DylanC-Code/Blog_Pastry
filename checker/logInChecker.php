@@ -15,4 +15,4 @@ if (password_verify($password, $passwordDb)) {
     header("location:/blog_pastry/homePage.php?username=$usernameDb");
 } else {
     header('location:/blog_pastry/logIn.php?error=passEmailIncorect');
-}
+} 
