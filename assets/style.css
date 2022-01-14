@@ -23,6 +23,13 @@
 /********************/
 /****** HEADER ******/
 /********************/
+img[alt="logo admin"] {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
 #homePageHeader {
   height: 100vh;
   display: flex;
@@ -231,3 +238,4 @@ footer p {
   font: 900 1.43rem Roboto;
   -webkit-text-stroke: 1px black;
 }
+

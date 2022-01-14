@@ -11,6 +11,8 @@
 </head>
 <body>
 <header>
+<?php if (isset($admin)) {echo $admin;}
+?>
   <div class="logoContainer">
     <img src="./assets\media\logo.png" alt="Logo">
     <h1>The pastry <span>differently<br>

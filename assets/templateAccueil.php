@@ -11,6 +11,8 @@
 </head>
 <body>
   <header id="homePageHeader">
+    <?php if (isset($admin)) {echo $admin;}
+?>
     <h1><pre>Welcome to Pastry Freak
         <em>The pastry</em> differently</pre>
     </h1>

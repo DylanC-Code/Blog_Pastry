@@ -1,9 +1,14 @@
 <?php
+session_start();
+if (isset($_SESSION['connect']) && $_SESSION['connect'] === 'admin') {
+    $admin = "<img src='./assets/media/admin_logo' alt='logo admin'>";
+}
+
 require_once 'C:\wamp64\www\Blog_Pastry\connectToDb.php';
 
 $category = $_GET['category'];
 
-$req = $db->query("SELECT `recipe`, `difficulty`, 'user_name', `image` FROM `recipes` INNER JOIN `categories` ON `recipes`.`category` = `categories`.`id_category` WHERE `categories`.`category_name` = '$category'");
+$req = $db->query("SELECT `id_recipe`,`recipe`, `difficulty`, 'user_name', `image` FROM `recipes` INNER JOIN `categories` ON `recipes`.`category` = `categories`.`id_category` WHERE `categories`.`category_name` = '$category'");
 $fetch = $req->fetchAll(PDO::FETCH_ASSOC);
 ////////////////////////
 //////// HEADER ////////
@@ -68,6 +73,10 @@ switch ($recipe['difficulty']) {
     case 3:echo "<img src='./assets/media/difficulty3' alt='etoile'>";
         break;
 }?>
+      <a href="./recipePage?recipe=<?=$recipe['id_recipe']?>" class='btn-card glow-on-hover'>More about</a>
+      <?php if (isset($_SESSION['connect']) && $_SESSION['connect'] === 'admin') {
+    echo "<a href='#'><img src='./assets/media/edit_logo' alt='edit_logo'></a>";
+}?>
       </div>
 <?php }?>
     </div>
@@ -89,6 +98,10 @@ switch ($recipe['difficulty']) {
         break;
     case 3:echo "<img src='./assets/media/difficulty3' alt='etoile'>";
         break;
+}?>
+<a href="./recipePage?recipe=<?=$recipe['id_recipe']?>" class='btn-card glow-on-hover'>More about</a>
+<?php if (isset($_SESSION['connect']) && $_SESSION['connect'] === 'admin') {
+    echo "<a href='#'><img src='./assets/media/edit_logo' alt='edit_logo'></a>";
 }?>
     </div>
     <?php }?>

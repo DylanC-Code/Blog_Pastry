@@ -41,9 +41,9 @@ ob_start()?>
           <input type="radio" name="difficulty" value="2" id="lvl2" required><label for="lvl2">2</label>
           <input type="radio" name="difficulty" value="3" id="lvl3" required><label for="lvl3">3</label>
           <h3>Category</h3>
-          <input type="radio" name="category" value="pies" id="pies" required checked><label for="pies">Pie</label>
-          <input type="radio" name="category" value="macaroons" id="macaroons" required><label for="macaroons">Macaroon</label>
-          <input type="radio" name="category" value="cakes" id="cakes" required><label for="cakes">Cake</label>
+          <input type="radio" name="category" value="1" id="pies" required checked><label for="pies">Pie</label>
+          <input type="radio" name="category" value="2" id="macaroons" required><label for="macaroons">Macaroon</label>
+          <input type="radio" name="category" value="3" id="cakes" required><label for="cakes">Cake</label>
         </fieldset>
         <input type="submit" value="SUBMIT">
       </form>

@@ -56,7 +56,7 @@ function newUser($email, $emailDb, $username, $usernameDb, $password, $passwordV
 {
     if (usernameChecker($username, $usernameDb) && emailChecker($email, $emailDb) && passwordChecker($password, $passwordVerif)) {
         $hashPass = password_hash($password, PASSWORD_BCRYPT);
-        $req = $db->query("INSERT INTO `users` (`username`, `email`, `password`) VALUES ('$username', '$email','$hashPass')");
+        $req = $db->query("INSERT INTO `users` (`user_name`, `email`, `password`) VALUES ('$username', '$email','$hashPass')");
         header('location:/blog_pastry/homePage.php');
     }
 }

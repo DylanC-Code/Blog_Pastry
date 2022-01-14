@@ -1,5 +1,8 @@
 <?php
-
+session_start();
+if (isset($_SESSION['connect']) && $_SESSION['connect'] === 'admin') {
+    $admin = "<img src='./assets/media/admin_logo' alt='logo admin'>";
+}
 require_once 'C:\wamp64\www\Blog_Pastry\connectToDb.php';
 
 $req = $db->query("SELECT `id_recipe`,`image`, `recipe` FROM `recipes` ORDER BY `id_recipe` DESC LIMIT 6");
