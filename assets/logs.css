@@ -553,6 +553,12 @@ footer p {
     transform: scaleX(2) rotate(180deg);
     left: 9%;
   }
+  main {
+    flex-direction: column;
+  }
+  main > div {
+    width: 100% !important;
+  }
 }
 @media screen and (max-width: 1340px) {
   header h2 {
@@ -589,6 +595,11 @@ footer p {
     margin: 2rem;
   }
 }
+@media screen and (max-width: 1100px) {
+  form[action*="checker"] fieldset {
+    width: 80vw;
+  }
+}
 @media screen and (max-width: 1080px) {
   header h2 {
     font-size: 4.37rem;
@@ -603,8 +614,6 @@ footer p {
     left: -2%;
     bottom: -75px;
   }
-}
-@media screen and (max-width: 1080px) {
   .logoContainer {
     margin-bottom: 30vh;
   }
@@ -624,7 +633,16 @@ footer p {
   header h2 {
     margin-top: 10vh;
   }
+  form[action*="checker"] {
+    margin-top: -30vh;
+  }
+  form[action*="recipeValidator"] fieldset,
+  form[action*="recipeValidator"] input[type="text"],
+  form[action*="recipeValidator"] label {
+    width: 100% !important;
+  }
 }
+
 @media screen and (max-width: 800px) {
   .logoContainer h1 {
     font-size: 1.82rem;
@@ -648,6 +666,25 @@ footer p {
   }
   footer p,
   footer ul a {
+    font-size: 1.2rem;
+  }
+  form[action*="checker"] fieldset label {
+    font-size: 1.5rem;
+  }
+  form[action*="recipeValidator"] label,
+  form[action*="recipeValidator"] input[type="text"] {
+    font-size: 1.5rem;
+  }
+  form[action*="recipeValidator"] input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+  main > div:nth-child(1) h1::after {
+    bottom: -15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  form[action*="checker"] fieldset label {
     font-size: 1.2rem;
   }
 }
